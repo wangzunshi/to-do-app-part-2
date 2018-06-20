@@ -2,11 +2,21 @@ function onReady() {
 
 //------------step 1-----------//
 let id = 0;
+
+
 //----------------------//
 
-  const toDos = [];
+  let toDos = [];
 
   const addToDoForm = document.getElementById('addToDoForm');
+
+
+//  function filterMethod (id) {
+//    return toDos.filter(toDo => toDo.id !== id);
+//  };
+
+
+
 
   function createNewToDo () {
     const newToDoText = document.getElementById('newToDoText');
@@ -18,12 +28,15 @@ let id = 0;
       complete: false,
 
       //------step 2-----------------//
-      id: id.value
+  ///    id: id.value
+      id: ++id
+
+
       //----------------------//
 
     });
     //---------step 3-----------//
-    id++;
+    /// id++;
     //-------------------//
     newToDoText.value = '';
 
@@ -62,12 +75,18 @@ let id = 0;
 
           newLi.appendChild(remove);
 
-          remove.addEventListener("click", function (){
+          remove.addEventListener("click", function deleteToDo(id) {
+
 
             // toDoList.removeChild (newLi);
 
             //---------------step 5------------//
-            toDos.filter(toDos.id);
+          //  toDos.filter(filterMethod);
+
+              return toDos.filter(toDo => toDo.id !== id);
+              
+              toDos = deleteToDo(toDo.id);
+
 
             //--------------------------------//
 
