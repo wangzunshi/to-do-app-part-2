@@ -1,0 +1,50 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  width: 30%;
+  margin: 0 auto;
+  background-color: #323335;
+}
+h1 {
+  font-size: 2.5em;
+  text-align: center;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  font-weight: lighter;
+  background-color: #e6e8ed
+
+
+}
+label {
+  font-size: 1em;
+  font-weight: lighter;
+}
+form, ul {
+  padding-left: 20%;
+}
+button {
+   background-color: #5795f9;
+   border: none;
+   color: white;
+   padding: 5px 15px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 1em;
+   margin: 4px 2px;
+   cursor: pointer;
+   font-weight: normal;
+  
+
+}
+
+.content {
+  background-color: white;
+  height: 800px;
+}
