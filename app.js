@@ -15,7 +15,12 @@ let id = 0;
 //    return toDos.filter(toDo => toDo.id !== id);
 //  };
 
-
+function filterMethod(toDo) {
+   toDos = toDos.filter( (todo) => {
+     return todo !== toDo;
+   });
+    renderTheUI(toDos);
+  }
 
 
   function createNewToDo () {
@@ -75,17 +80,18 @@ let id = 0;
 
           newLi.appendChild(remove);
 
-          remove.addEventListener("click", function deleteToDo(id) {
+          remove.addEventListener("click", function () {
+
+            filterMethod(toDo)
 
 
-            // toDoList.removeChild (newLi);
 
             //---------------step 5------------//
           //  toDos.filter(filterMethod);
 
-              return toDos.filter(toDo => toDo.id !== id);
-              
-              toDos = deleteToDo(toDo.id);
+
+
+
 
 
             //--------------------------------//
